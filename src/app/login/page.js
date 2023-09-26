@@ -3,7 +3,7 @@ import { useSession, signOut, signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
 
 export default function Login() {
-  const { data: session, status, update } = useSession();
+  const { data: session, status } = useSession();
   console.log(session);
   console.log(status);
   if (status === "loading") {
